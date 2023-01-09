@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Clock</title>
+</head>
+<style>
+body {
+  padding: 10px;
+  margin: 0;
+  overflow: hidden;
+  background-color: transparent;
+  text-align: right;
+  color: white;
+  font-family: monospace;
+  text-shadow: 3px 3px 2px rgba(0,0,0,0.3);
+  font-size: 72px;
+  line-height: 1;
+}
+</style>
+<body>
+<script>
+setInterval(() => {
+  document.body.innerText = Intl.DateTimeFormat(['sv-SE'], { day: 'numeric', month: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' }).format(new Date());
+}, 100);
+</script>
+</body>
+</html>
